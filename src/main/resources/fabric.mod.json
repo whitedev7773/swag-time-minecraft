@@ -1,0 +1,51 @@
+{
+	"schemaVersion": 1,
+	"id": "swagtime",
+	"version": "${version}",
+	"name": "SwagTime",
+	"description": "Swag Time!",
+	"authors": [
+		"WhiteDev7773"
+	],
+	"contact": {
+		"github": "https://github.com/whitedev7773/",
+		"youtube": "https://youtube.com/@화뎁",
+		"sources": "https://github.com/whitedev7773/swag-time-minecraft"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/swagtime/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "dev.whitedev7773.swagtime.SwagTime",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "dev.whitedev7773.swagtime.SwagTimeDataGenerator",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "dev.whitedev7773.swagtime.SwagTimeClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"swagtime.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
