@@ -23,7 +23,7 @@
 ## 설치 방법
 
 1. **Fabric Loader (1.21.10)** 설치
-2. `swagtime-1.0.0.jar` 파일을 `mods` 폴더에 넣기
+2. [swagtime-1.0.0.jar](https://github.com/whitedev7773/swag-time-minecraft/releases/tag/Release) 파일을 `mods` 폴더에 넣기
 
 ## 개발 정보
 
