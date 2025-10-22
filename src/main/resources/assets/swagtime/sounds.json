@@ -1,0 +1,22 @@
+{
+  "music1": {
+    "sounds": [
+      { "name": "swagtime:music1", "stream": true }
+    ]
+  },
+  "music2": {
+    "sounds": [
+      { "name": "swagtime:music2", "stream": true }
+    ]
+  },
+  "music3": {
+    "sounds": [
+      { "name": "swagtime:music3", "stream": true }
+    ]
+  },
+  "music4": {
+    "sounds": [
+      { "name": "swagtime:music4", "stream": true }
+    ]
+  }
+}

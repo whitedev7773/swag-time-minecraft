@@ -1,5 +1,6 @@
 package dev.whitedev7773.swagtime
 
+import dev.whitedev7773.swagtime.handler.PlayerEventHandler
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 
@@ -12,5 +13,6 @@ object SwagTime : ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		logger.info("Hello Fabric world!")
+		PlayerEventHandler().registerEvents()
 	}
 }

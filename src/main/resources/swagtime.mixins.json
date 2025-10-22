@@ -2,8 +2,12 @@
 	"required": true,
 	"package": "dev.whitedev7773.swagtime.mixin",
 	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"MouseMixin"
+	],
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"FreezePlayerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
