@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.event.player.UseBlockCallback
 import net.fabricmc.fabric.api.event.player.UseItemCallback
 import net.fabricmc.fabric.api.event.player.UseEntityCallback
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback
+import net.minecraft.entity.player.PlayerInventory
 import net.minecraft.util.ActionResult
 
 import org.slf4j.LoggerFactory
@@ -19,6 +20,7 @@ class PlayerEventHandler {
     fun freeze() {
         GrayOverlayHud.visible = true
         ImageOverlayHud.visible = true
+        ImageOverlayHud.setTexture()
         SoundHandler.playRandom()
         FreezeHandler.freeze()
 

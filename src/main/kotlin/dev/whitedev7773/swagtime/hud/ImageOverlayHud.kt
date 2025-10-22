@@ -9,7 +9,20 @@ import net.minecraft.client.render.RenderTickCounter
 import net.minecraft.util.Identifier
 
 object ImageOverlayHud : HudElement {
-    private val texture = Identifier.of(MOD_ID, "textures/gui/image1.png")
+    // 1~6
+    private val texture1 = Identifier.of(MOD_ID, "textures/gui/image1.png")
+    private val texture2 = Identifier.of(MOD_ID, "textures/gui/image2.png")
+    private val texture3 = Identifier.of(MOD_ID, "textures/gui/image3.png")
+    private val texture4 = Identifier.of(MOD_ID, "textures/gui/image4.png")
+    private val texture5 = Identifier.of(MOD_ID, "textures/gui/image5.png")
+    private val texture6 = Identifier.of(MOD_ID, "textures/gui/image6.png")
+    private val textures = listOf(texture1, texture2, texture3, texture4, texture5, texture6)
+
+    var texture = textures[0]
+
+    fun setTexture() {
+        texture = textures.random()
+    }
 
     var visible = false
 

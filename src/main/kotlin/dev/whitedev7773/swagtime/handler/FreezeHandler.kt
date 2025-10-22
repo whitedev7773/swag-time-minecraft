@@ -1,6 +1,6 @@
 package dev.whitedev7773.swagtime.handler
 
-import net.minecraft.client.MinecraftClient
+import dev.whitedev7773.swagtime.handler.SilentCommandHandler.runSilentCommand
 
 /**
  * 공통 상태 관리 객체.
@@ -19,13 +19,15 @@ object FreezeHandler {
 
     @JvmStatic
     fun freeze() {
-        executeClientCommand("/tick freeze")
+//        executeClientCommand("/tick freeze")
+        runSilentCommand("/tick freeze")
         frozen = true
     }
 
     @JvmStatic
     fun unfreeze() {
-        executeClientCommand("/tick unfreeze")
+//        executeClientCommand("/tick unfreeze")
+        runSilentCommand("/tick unfreeze")
         frozen = false
     }
 
@@ -36,15 +38,4 @@ object FreezeHandler {
 
     @JvmStatic
     fun isGameFrozen(): Boolean = frozen
-
-    fun executeClientCommand(command: String) {
-        val client = MinecraftClient.getInstance()
-
-        // 클라이언트가 서버에 접속 중인지 확인
-        if (client.player != null) {
-            client.player!!.networkHandler.sendChatCommand(command.removePrefix("/"))
-        } else {
-            println("❌ 명령 실행 불가: 클라이언트에 플레이어가 없습니다.")
-        }
-    }
 }
